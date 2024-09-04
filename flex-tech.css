@@ -1,0 +1,407 @@
+/* Parallax */
+.parallax {
+    /* Coloca a imagem no background */
+    background-image: url("img/maotech.png");
+
+    /* Faz com que a imagem fique parada */
+    background-attachment: fixed;
+
+    /* Deixa a imagem no centro da página */
+    background-position: center;
+
+    /* Permite que a imagem não fique se repetindo */
+    background-repeat: no-repeat;
+
+    /* Faz com que a imagem fique em toda a tela, redimensionado seu tamanho*/
+    background-size: cover;
+
+    /* Altura do Parallax (separar/distanciamento dos blocos) */
+    height: 50vh;
+}
+
+/* Formatação do Site */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* FlexBox do Site inteiro */
+.flexbox-site {
+    display: flex;
+    flex-direction: row;
+}
+
+/* FlexBox para o NAV */
+.nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #03346E;
+    width: 20%;
+    height: 200vh;
+}
+
+/* Definir a LI (lista) do NAV */
+.nav li {
+    padding-left: 5%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1vw;
+}
+
+/* Definir o A (link) do NAV */
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Definir o H1 (Título) do NAV */
+.nav h1 {
+    color: aliceblue;
+}
+
+/* FlexBox da Lista do ANV */
+.lista-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Definir o H1 (Titulo) da Lista */
+.lista-nav h1 {
+    font-size: 1.5vw;
+}
+
+/* Junta o Header, Section (article + aside) e Footer */
+.flexbox-principal {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+/* FlxBox do Header */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #021526;
+    height: 20vh;
+}
+
+/* Definir o H1 (Título) do Header */
+.header h1 {
+    font-size: 2vw;
+    color: white;
+}
+
+/* Definir as Imagens do Header */
+.header img {
+    width: 10vw;
+    height: 14vh;
+}
+
+/* Article e Aside */
+.flexbox-art_asd {
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+
+}
+
+/* FlexBox do Article */
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #E2E2B6;
+    align-items: center;
+    height: 60vh;
+    width: 70%;
+}
+
+/* FlexBox do 1º Texto do Article (ao lado da foto) */
+.bloco1-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 20vh;
+}
+
+/* Definir a Imagem do 1º Texto do Article */
+.bloco1-article img {
+    width: 15vw;
+    height: 25vh;
+    padding-right: 5%;
+}
+
+/* Definir o P (Parágrafo) do 1º Texto do Article (ao lado da foto) */
+.bloco1-article p {
+    font-size: 1.1vw;
+}
+
+/* FlexBox do 2º Texto do Article (abaixo da foto) */
+.bloco2-article {
+    width: 80%;
+    text-align: justify;
+}
+
+/* Definir o P (Parágrafo) do 2º Texto do Article (abaixo da foto) */
+.bloco2-article p {
+    font-size: 1.1vw;
+}
+
+/* FlexBox do Aside */
+.aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 60vh;
+    background-color: #6EACDA;
+}
+
+/* Definir o H1 (Título) do Aside */
+.aside h1 {
+    font-size: 2vw;
+}
+
+/* FlexBox do Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: space-around;
+    background-color: #021526;
+}
+
+/* Definir o H1 (Título) do Footer */
+.footer h1 {
+    padding-left: 2%;
+    font-size: 1.5vw;
+    color: aliceblue;
+}
+
+/* Definir o P (Parágrafo) do Footer */
+.footer p {
+    padding-left: 2%;
+    font-size: 1vw;
+    color: white;
+}
+
+/* Definir o tamanho da tela até 480px */
+@media screen and (max-width: 480px) {
+
+    /* Remover todas as Imagens */
+    img {
+        display: none;
+    }
+
+    /* FlexBox do Site Principal */
+    .flexbox-site {
+        flex-direction: column;
+    }
+
+    /* FlexBox do NAV */
+    .nav {
+        width: auto;
+        height: auto;
+        padding-bottom: 10%;
+    }
+
+    /* Definir a altura do Parallax (separar os blocos) */
+    .parallax {
+        height: 30vh;
+    }
+
+    /* Definir o H1 (Título) do NAV */
+    .nav h1 {
+        font-size: 10vw;
+    }
+
+    /* Definir a LI (lista) do NAV */
+    .nav li {
+        font-size: 7vw;
+    }
+
+    /* FlexBox onde junta o Header, Section (article + aside) e Footer */
+    .flexbox-principal {
+        width: auto;
+    }
+
+    /* FlexBox para juntar o Article e Aside */
+    .flexbox-art_asd {
+        flex-direction: column;
+        height: 210vh;
+    }
+
+    /* Definir o H1 (Título) do Aside */
+    .header h1 {
+        font-size: 10vw;
+    }
+
+    /* FlexBox do Article */
+    .article {
+        width: auto;
+        height: 80%;
+    }
+
+    /* Definir o P (Parágrafo) do 1º Texto do Article (ao lado da foto) */
+    .bloco1-article p {
+        font-size: 5vw;
+        padding-top: 20%;
+    }
+
+    /* Definir o P (Parágrafo) do 2º Texto do Article (abaixo da foto) */
+    .bloco2-article p {
+        font-size: 5vw;
+    }
+
+    /* FlexBox do Aside */
+    .aside {
+        width: auto;
+        height: 80vh;
+    }
+
+    /* Definir o H1 (Título) do Aside */
+    .aside h1 {
+        font-size: 10vw;
+        padding-bottom: 5%;
+    }
+
+    /* Definir a LI (Lista) do Aside */
+    .aside li {
+        font-size: 7vw;
+        text-align: center;
+        padding-top: 2%;
+    }
+
+    /* FlexBox do Footer */
+    .footer {
+        text-align: justify;
+        height: 70vh;
+        justify-content: flex-start;
+    }
+
+    /* Definir o H1 (Título) do Footer */
+    .footer h1 {
+        font-size: 10vw;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        text-align: center;
+    }
+
+    /* Definir o P (Parágrafo) do Footer */
+    .footer p {
+        font-size: 6vw;
+        padding-left: 8%;
+        padding-right: 8%;
+        padding-bottom: 2%;
+    }
+}
+
+/* Definir o tamanho da tela, mínimo 481px e máximo 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    /* FlexBox do NAV */
+    .nav {
+        height: 210vh;
+    }
+
+    /* Definir o H1 (Título) do NAV */
+    .nav h1 {
+        font-size: 3.5vw;
+        text-align: center;
+    }
+
+    /* Definir o LI (Lista) do NAV */
+    .nav li {
+        font-size: 2.5vw;
+        padding-top: 80%;
+    }
+
+    /* Definir o UL (Tipo de Lista) do NAV */
+    .nav ul {
+        padding-left: 10%;
+    }
+
+    /* Definir o H1 (Título) do Header */
+    .header h1 {
+        font-size: 4.5vw;
+    }
+
+    /* Definir a Imagem do Header */
+    .header img {
+        width: 19vw;
+        height: 15vh;
+    }
+
+    /* FlexBox para juntar o Article e Aside */
+    .flexbox-art_asd {
+        flex-direction: column;
+        height: 140vh;
+    }
+
+    /* FlexBox do Article */
+    .article {
+        width: auto;
+        height: 65%;
+    }
+
+    /* Definir o P (Parágrafo) do 1º Texto do Article (ao lado da foto) */
+    .bloco1-article p {
+        font-size: 2.5vw;
+        padding-top: 15%;
+    }
+
+    /* Definir a Imagem do 1º Texto do Article */
+    .bloco1-article img {
+        width: 19vw;
+        height: 15vh;
+    }
+
+    /* Definir o P (Parágrafo) do 2º Texto do Article (abaixo da foto) */
+    .bloco2-article p {
+        font-size: 2.5vw;
+        padding-top: 5%;
+    }
+
+    /* FlexBox do Aside */
+    .aside {
+        width: auto;
+        height: 35%;
+    }
+
+    /* Definir o H1 (Título) do Aside */
+    .aside h1 {
+        font-size: 4.5vw;
+    }
+
+    /* Definir o LI (Lista) do Aside */
+    .aside li {
+        font-size: 2.5vw;
+    }
+
+    /* FlexBox do Footer */
+    .footer {
+        text-align: center;
+        height: 50vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Definir o H1 (Título) do Footer */
+    .footer h1 {
+        font-size: 4.5vw;
+    }
+
+    /* Definir o P (Parágrafo) do Footer */
+    .footer p {
+        font-size: 2vw;
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
